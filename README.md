@@ -60,6 +60,11 @@
     $ docker logs pihole
     ```
 
+* Change Pi-hole password
+    ```shell
+    $ docker exec -it pihole pihole -a -p [password]
+    ```
+
 * Upgrade Pi-hole
     ```shell
     $ cd ~/Workspaces/pihole
