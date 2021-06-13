@@ -4,12 +4,12 @@
 * Generate key pairs and copy public key to remote host
     ```shell
     $ cd ~/.ssh
-    $ ssh-keygen -t rsa -b 4096 -C "user@host.com"
-    $ chmod 600 id_rsa id_rsa.pub
+    $ ssh-keygen -t ed25519 -f id_ed25519_mac-mini
+    # ssh-keygen -t rsa -b 4096 -f id_rsa_mac-mini
     $ ssh-add -l
     $ ssh-add -D
-    $ ssh-add -K ~/.ssh/id_rsa
-    $ ssh-copy-id -i ~/.ssh/id_rsa kevin@mac-mini.local
+    $ ssh-add -K ~/.ssh/id_ed25519_mac-mini
+    $ ssh-copy-id -i ~/.ssh/id_ed25519_mac-mini kevin@mac-mini.local
     $ ssh kevin@mac-mini.local
     ```
 
