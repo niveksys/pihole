@@ -17,8 +17,8 @@ services:
       PIHOLE_DNS_: "1.1.1.1;1.0.0.1;8.8.8.8"
     # Volumes store your data between container upgrades
     volumes:
-      - "etc-pihole:/etc/pihole/"
-      - "etc-dnsmasq.d:/etc/dnsmasq.d/"
+      - "pihole-vol:/etc/pihole/"
+      - "pihole-dnsmasq.d-vol:/etc/dnsmasq.d/"
     # Recommended but not required (DHCP needs NET_ADMIN)
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
@@ -29,7 +29,7 @@ services:
       - 1.1.1.1
 
 volumes:
-  etc-pihole:
-    name: etc-pihole
-  etc-dnsmasq.d:
-    name: etc-dnsmasq.d
+  pihole-vol:
+    name: pihole-vol
+  pihole-dnsmasq.d-vol:
+    name: pihole-dnsmasq.d-vol
