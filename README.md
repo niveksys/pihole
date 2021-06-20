@@ -52,7 +52,7 @@
 * Start Pi-hole with docker compose on remote host
     ```shell
     $ cd ~/Workspaces/pihole
-    $ docker pull pihole/pihole:latest
+    $ docker pull pihole/pihole
     $ docker compose config
     $ docker compose up -d
     ```
