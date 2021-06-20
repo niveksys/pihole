@@ -5,6 +5,7 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole
+    restart: unless-stopped
     ports:
       - "53:53/tcp"
       - "53:53/udp"
@@ -23,7 +24,6 @@ services:
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
       - NET_ADMIN
-    restart: unless-stopped
     dns:
       - 127.0.0.1
       - 1.1.1.1
